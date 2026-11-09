@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Roles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.jpg" class="logo" alt="NGO Logo">
+    <h1>NGO Management System</h1>
+    <hr>
+    <h2>Assign Volunteer Roles</h2>
+    <p class="subtitle">Assign a volunteer to a campaign role and shift.</p>
+    <p id="count"></p>
+    <a href="project.html" class="back-button">← Back to Dashboard</a>
+    <div class="assign-form">
+        <label>Volunteer</label>
+        <select id="volunteer">
+            <option value="">-- Select Volunteer --</option>
+            <option>Rahul Sharma</option>
+            <option>Priya Verma</option>
+            <option>Aman Singh</option>
+        </select>
+        <label>Campaign</label>
+        <select id="campaign">
+            <option value="">-- Select Campaign --</option>
+            <option>Tree Plantation Drive</option>
+            <option>Education for All</option>
+            <option>Food Distribution Drive</option>
+        </select>
+        <label>Assigned Role</label>
+        <input type="text" id="role" placeholder="e.g. Team Leader">
+        <label>Shift</label>
+        <input type="text" id="shift" placeholder="e.g. 9:00 AM – 12:00 PM">
+        <button class="action-btn" onclick="assignVolunteer()">Assign Volunteer</button>
+    </div>
+    <div class="assignment-grid" id="grid">
+        <div class="assignment-card">
+            <h3>Rahul Sharma</h3>
+            <p><strong>Volunteer ID:</strong> VOL-001</p>
+            <p><strong>Campaign:</strong> Tree Plantation Drive</p>
+            <p><strong>Assigned Role:</strong> Team Leader</p>
+            <p><strong>Shift:</strong> 9:00 AM – 12:00 PM</p>
+        </div>
+        <div class="assignment-card">
+            <h3>Priya Verma</h3>
+            <p><strong>Volunteer ID:</strong> VOL-002</p>
+            <p><strong>Campaign:</strong> Education for All</p>
+            <p><strong>Assigned Role:</strong> Teaching Assistant</p>
+            <p><strong>Shift:</strong> 10:00 AM – 1:00 PM</p>
+        </div>
+        <div class="assignment-card">
+            <h3>Aman Singh</h3>
+            <p><strong>Volunteer ID:</strong> VOL-003</p>
+            <p><strong>Campaign:</strong> Tree Plantation Drive</p>
+            <p><strong>Assigned Role:</strong> Logistics Support</p>
+            <p><strong>Shift:</strong> 12:00 PM – 3:00 PM</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

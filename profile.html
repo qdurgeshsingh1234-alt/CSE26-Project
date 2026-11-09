@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Profiles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.jpg" class="logo" alt="NGO Logo">
+    <h1>NGO Management System</h1>
+    <hr>
+    <h2>Volunteer Profiles</h2>
+    <p class="subtitle">Search registered volunteers and contact them.</p>
+    <p id="count"></p>
+    <a href="project.html" class="back-button">← Back to Dashboard</a>
+    <br>
+    <input type="text" class="search-box" id="search" placeholder="Search by name, skill or availability..." onkeyup="searchVolunteers()">
+    <div class="profile-grid">
+        <div class="profile-card">
+            <div class="avatar">RS</div>
+            <h3>Rahul Sharma</h3>
+            <p><strong>Volunteer ID:</strong> VOL-001</p>
+            <p><strong>Skills:</strong> Communication, Event Management</p>
+            <p><strong>Availability:</strong> Weekends</p>
+            <button class="contact-btn" onclick="contactVolunteer('Rahul Sharma')">Contact</button>
+        </div>
+        <div class="profile-card">
+            <div class="avatar">PV</div>
+            <h3>Priya Verma</h3>
+            <p><strong>Volunteer ID:</strong> VOL-002</p>
+            <p><strong>Skills:</strong> Teaching, Communication</p>
+            <p><strong>Availability:</strong> Weekdays</p>
+            <button class="contact-btn" onclick="contactVolunteer('Priya Verma')">Contact</button>
+        </div>
+        <div class="profile-card">
+            <div class="avatar">AS</div>
+            <h3>Aman Singh</h3>
+            <p><strong>Volunteer ID:</strong> VOL-003</p>
+            <p><strong>Skills:</strong> Logistics, Teamwork</p>
+            <p><strong>Availability:</strong> Flexible</p>
+            <button class="contact-btn" onclick="contactVolunteer('Aman Singh')">Contact</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

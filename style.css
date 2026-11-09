@@ -1,0 +1,259 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(rgb(2,196,255), rgb(26,141,177), rgb(9,101,193));
+    background-attachment: fixed;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+.logo { height: 70px; border-radius: 30px; margin-top: 20px; }
+h1, h2, h3, p { font-family: sans-serif; color: white; }
+h2 { margin-top: 25px; }
+.subtitle { margin-bottom: 25px; }
+hr { border: 2px solid white; }
+
+.back-button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+.back-button:hover { background: rgba(0,0,0,0.4); }
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 30vw);
+    gap: 3vh 5vw;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.card {
+    position: relative;
+    width: 30vw;
+    height: 18vh;
+    border-radius: 15px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+.card img { width: 100%; height: 100%; object-fit: cover; }
+.card span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 90%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 8px #000;
+}
+
+.profile-grid, .campaign-grid, .assignment-grid, .available-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.profile-card, .campaign-card, .assignment-card, .available-card, .stat-card {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    overflow-wrap: anywhere;
+}
+
+.campaign-card, .assignment-card, .available-card { text-align: left; }
+.campaign-card h3, .assignment-card h3, .available-card h3 { text-align: center; }
+.profile-card p, .campaign-card p, .assignment-card p, .available-card p { font-size: 14px; line-height: 1.6; }
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    color: #1677a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.active { background: #168447; }
+.upcoming { background: #b77b00; }
+.completed { background: #536579; }
+
+.join-btn, .contact-btn {
+    background: rgba(0,0,0,0.3);
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: sans-serif;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.join-btn:hover, .contact-btn:hover { background: rgba(0,0,0,0.5); }
+.join-btn:disabled { background: #168447; cursor: default; }
+
+.contact-btn { display: block; margin: 10px auto 0; }
+
+.action-btn {
+    background: #168447;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.action-btn:hover { background: #126b3a; }
+
+.small-btn {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.small-btn:hover { background: #a93226; }
+
+.filter-bar { margin: 15px auto; }
+.filter-btn {
+    background: rgba(0,0,0,0.2);
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: sans-serif;
+    margin: 0 5px;
+}
+.filter-btn:hover { background: rgba(0,0,0,0.4); }
+.active-filter { background: #168447; }
+
+.search-box {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid white;
+    background: rgba(0,0,0,0.2);
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 300px;
+    max-width: 80%;
+    margin-bottom: 15px;
+}
+.search-box::placeholder { color: rgba(255,255,255,0.6); }
+
+.assign-form {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+.assign-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 14px;
+}
+.assign-form input, .assign-form select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid white;
+    background: rgba(255,255,255,0.9);
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.assign-form .action-btn { width: 100%; margin-top: 15px; margin-bottom: 0; }
+
+.spots-left { font-size: 13px; color: #ffd700; font-weight: bold; }
+
+.table-container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 15px;
+    overflow-x: auto;
+}
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0,0,0,0.18);
+    font-family: sans-serif;
+}
+.schedule-table th, .schedule-table td {
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 15px 12px;
+    text-align: center;
+}
+.schedule-table th { background: rgba(0,0,0,0.25); }
+.schedule-table tr:hover { background: rgba(255,255,255,0.1); }
+.schedule-row { cursor: pointer; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 15px;
+}
+.stat-card { cursor: pointer; }
+.stat-card h3 { font-size: 15px; }
+.stat-number { font-size: 30px; font-weight: bold; margin: 10px 0; }
+
+.progress-list { max-width: 900px; margin: 20px auto; padding: 15px; }
+.progress-card {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+.progress-card p { font-size: 14px; }
+.progress-card progress { width: 100%; height: 18px; }
+
+@media (max-width: 750px) {
+    .profile-grid, .campaign-grid, .assignment-grid, .available-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 500px) {
+    .profile-grid, .campaign-grid, .assignment-grid, .available-grid, .stats-grid { grid-template-columns: 1fr; }
+}

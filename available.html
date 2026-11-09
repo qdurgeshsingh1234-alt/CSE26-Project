@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Campaigns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.jpg" class="logo" alt="NGO Logo">
+    <h1>NGO Management System</h1>
+    <hr>
+    <h2>Available Campaigns</h2>
+    <p class="subtitle">Browse open opportunities and join a campaign.</p>
+    <a href="project.html" class="back-button">← Back to Dashboard</a>
+    <div class="filter-bar">
+        <button class="filter-btn active-filter" onclick="filterCampaigns('all', this)">All</button>
+        <button class="filter-btn" onclick="filterCampaigns('Open', this)">Open</button>
+        <button class="filter-btn" onclick="filterCampaigns('Upcoming', this)">Upcoming</button>
+    </div>
+    <div class="available-grid">
+        <div class="available-card">
+            <h3>🌱 Tree Plantation Drive</h3>
+            <p><strong>Location:</strong> City Park</p>
+            <p><strong>Date:</strong> 15 November 2026</p>
+            <p class="spots-left">Spots left: <span class="spots">20</span></p>
+            <p><strong>Role:</strong> Planting and coordination</p>
+            <span class="status active">Open</span>
+            <br><button class="join-btn" onclick="joinCampaign(this)">Join Campaign</button>
+        </div>
+        <div class="available-card">
+            <h3>📚 Education for All</h3>
+            <p><strong>Location:</strong> Community School</p>
+            <p><strong>Date:</strong> 20 November 2026</p>
+            <p class="spots-left">Spots left: <span class="spots">10</span></p>
+            <p><strong>Role:</strong> Teaching assistance</p>
+            <span class="status upcoming">Upcoming</span>
+            <br><button class="join-btn" onclick="joinCampaign(this)">Join Campaign</button>
+        </div>
+        <div class="available-card">
+            <h3>🍲 Food Distribution Drive</h3>
+            <p><strong>Location:</strong> Community Centre</p>
+            <p><strong>Date:</strong> 25 November 2026</p>
+            <p class="spots-left">Spots left: <span class="spots">15</span></p>
+            <p><strong>Role:</strong> Packing and distribution</p>
+            <span class="status active">Open</span>
+            <br><button class="join-btn" onclick="joinCampaign(this)">Join Campaign</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

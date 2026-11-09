@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Campaigns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.jpg" class="logo" alt="NGO Logo">
+    <h1>NGO Management System</h1>
+    <hr>
+    <h2>Manage Campaigns</h2>
+    <p class="subtitle">Create, view and delete NGO campaigns.</p>
+    <p id="count"></p>
+    <a href="project.html" class="back-button">← Back to Dashboard</a>
+    <br>
+    <button class="action-btn" onclick="createCampaign()">+ Create New Campaign</button>
+    <div class="campaign-grid" id="grid">
+        <div class="campaign-card">
+            <h3>🌱 Tree Plantation Drive</h3>
+            <p><strong>Campaign ID:</strong> CAM-001</p>
+            <p><strong>Location:</strong> City Park</p>
+            <p><strong>Date:</strong> 15 November 2026</p>
+            <p><strong>Volunteers Needed:</strong> 20</p>
+            <p><strong>Status:</strong> <span class="status active">Active</span></p>
+            <button class="small-btn" onclick="deleteCard(this)">Delete</button>
+        </div>
+        <div class="campaign-card">
+            <h3>📚 Education for All</h3>
+            <p><strong>Campaign ID:</strong> CAM-002</p>
+            <p><strong>Location:</strong> Community School</p>
+            <p><strong>Date:</strong> 20 November 2026</p>
+            <p><strong>Volunteers Needed:</strong> 10</p>
+            <p><strong>Status:</strong> <span class="status upcoming">Upcoming</span></p>
+            <button class="small-btn" onclick="deleteCard(this)">Delete</button>
+        </div>
+        <div class="campaign-card">
+            <h3>🧹 Cleanliness Drive</h3>
+            <p><strong>Campaign ID:</strong> CAM-003</p>
+            <p><strong>Location:</strong> Main Market</p>
+            <p><strong>Date:</strong> 10 October 2026</p>
+            <p><strong>Volunteers Needed:</strong> 15</p>
+            <p><strong>Status:</strong> <span class="status completed">Completed</span></p>
+            <button class="small-btn" onclick="deleteCard(this)">Delete</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
