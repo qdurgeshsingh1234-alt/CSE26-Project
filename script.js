@@ -107,7 +107,7 @@ function assignVolunteer() {
 
 window.onload = function () {
     var page = location.pathname.split("/").pop();
-    if (page == "project.html") {
+    if (page == "index.html") {
         var box = get("date");
         if (box) box.innerHTML = today();
     }
